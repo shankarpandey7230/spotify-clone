@@ -4,8 +4,11 @@ import SidebarOptions from "./SidebarOptions";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LibraryMusicOutlinedIcon from "@mui/icons-material/LibraryMusicOutlined";
+import { useStateValue } from "./StateProvider";
 
 const Sidebar = () => {
+  const [{ playlists }, dispatch] = useStateValue();
+  console.log(playlists);
   return (
     <div className="sidebar">
       <img
@@ -19,12 +22,9 @@ const Sidebar = () => {
       <br />
       <strong className="sidebar_title">PLAYLISTS</strong>
       <hr />
-
-      <SidebarOptions title="Hiphop" />
-
-      <SidebarOptions title="Rock" />
-
-      <SidebarOptions title="Dohori" />
+      {playlists?.items?.map((playlist, id) => (
+        <SidebarOptions key={id} title={playlist.name} />
+      ))}
     </div>
   );
 };
