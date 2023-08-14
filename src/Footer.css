@@ -23,5 +23,10 @@
   max-width: 300px;
 }
 .footer_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
   flex: 0.3;
 }

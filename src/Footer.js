@@ -13,7 +13,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
-        <p>ALbum and songs details</p>
+        <div className="footer_songInfo">
+          <h4>Yeah</h4>
+          <p>User</p>
+        </div>
       </div>
       <div className="footer_center">
         <ShuffleIcon className="footer_green" />
