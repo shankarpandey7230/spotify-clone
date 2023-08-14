@@ -5,6 +5,9 @@ import SkipPreviousOutlinedIcon from "@mui/icons-material/SkipPreviousOutlined";
 import SkipNextOutlinedIcon from "@mui/icons-material/SkipNextOutlined";
 import ShuffleIcon from "@mui/icons-material/Shuffle";
 import RepeatIcon from "@mui/icons-material/Repeat";
+import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
+import VolumeDownIcon from "@mui/icons-material/VolumeDown";
+import { Grid, Slider } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -23,7 +26,17 @@ const Footer = () => {
         <RepeatIcon className="footer_green" />
       </div>
       <div className="footer_right">
-        <p>Volume Controls</p>
+        <Grid container spacing={2}>
+          <Grid item>
+            <PlaylistPlayIcon />
+          </Grid>
+          <Grid item>
+            <VolumeDownIcon />
+          </Grid>
+          <Grid item xs>
+            <Slider aria-labelledby="continuous-slider" />
+          </Grid>
+        </Grid>
       </div>
     </div>
   );
