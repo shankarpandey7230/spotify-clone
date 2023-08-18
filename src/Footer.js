@@ -13,6 +13,11 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
+        <img
+          className="footer_albumLogo"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/40/Taylor_swift_logo.jpg"
+          alt=""
+        />
         <div className="footer_songInfo">
           <h4>Yeah</h4>
           <p>User</p>
