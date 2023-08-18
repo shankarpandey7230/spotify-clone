@@ -1,6 +1,7 @@
 import React from "react";
 import "./Body.css";
 import Header from "./Header";
+import SongRow from "./SongRow";
 import { useStateValue } from "./StateProvider";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -27,6 +28,10 @@ const Body = ({ spotify }) => {
           <MoreHorizIcon />
         </div>
         {/* list of songs  */}
+
+        {discover_weekly?.tracks.items.map((item) => (
+          <SongRow track={item.track} />
+        ))}
       </div>
     </div>
   );

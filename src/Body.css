@@ -29,6 +29,10 @@
 .body_icons > .MuiSvgIcon-root {
   margin-right: 20px;
 }
+.body_songs {
+  z-index: 1;
+  margin: 20px -30px;
+}
 .body_shuffle:hover {
   transition: 100ms transform ease-in;
   transform: scale(1.08);
